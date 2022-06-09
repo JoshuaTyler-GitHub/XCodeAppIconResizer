@@ -28,6 +28,6 @@ fs.mkdirSync(tempDirectory);
 ICON_SIZES.map((value) => {
     return sharp(IMAGE_TO_RESIZE)
     .resize(value, value)
-    .toFile(`app_icon_${value}x${value}.png`)
+    .toFile(`${tempDirectory}/app_icon_${value}x${value}.png`)
     .catch((error) => console.error(error));
 });
